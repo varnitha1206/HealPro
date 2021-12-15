@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HealPro">
         <activity
+            android:name=".start"
+            android:exported="false" />
+        <activity
             android:name=".Home"
             android:exported="false" />
         <activity
