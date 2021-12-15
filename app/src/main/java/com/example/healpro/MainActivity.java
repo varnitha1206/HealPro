@@ -12,7 +12,13 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 
+import com.github.ybq.android.spinkit.SpinKitView;
+import com.github.ybq.android.spinkit.sprite.Sprite;
+import com.github.ybq.android.spinkit.style.DoubleBounce;
+import com.github.ybq.android.spinkit.style.FadingCircle;
+import com.github.ybq.android.spinkit.style.RotatingCircle;
 import com.synnapps.carouselview.CarouselView;
 import com.synnapps.carouselview.ImageListener;
 
@@ -20,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
 //    CarouselView carouselView;
 //    Button login, register;
 //    int[] sampleImages = {R.drawable.logo, R.drawable.logo, R.drawable.logo, R.drawable.logo, R.drawable.logo};
-
+private SpinKitView spinkit1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
@@ -35,8 +41,14 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(activity);
             }
         }, 4000);
+//        spinkit1=findViewById(R.id.spin_kit);
+//        spinkit1.setVisibility(View.GONE);
+        ProgressBar progressBar = (ProgressBar)findViewById(R.id.spin_kit);
+        Sprite doubleBounce = new FadingCircle();
+        progressBar.setIndeterminateDrawable(doubleBounce);
 
     }
+
 
 
 }

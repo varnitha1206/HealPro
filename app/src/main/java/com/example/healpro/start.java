@@ -16,7 +16,7 @@ import com.synnapps.carouselview.ImageListener;
 public class start extends AppCompatActivity {
     CarouselView carouselView;
     Button login,register;
-    int[] sampleImages = {R.drawable.logo, R.drawable.logo, R.drawable.logo, R.drawable.logo, R.drawable.logo};
+    int[] sampleImages = {R.drawable.logo, R.drawable.c2, R.drawable.c2, R.drawable.c2, R.drawable.c2};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
