@@ -37,6 +37,13 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(activity1Intent);
             }
         });
+        register.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent activity1Intent = new Intent(getApplicationContext(), Register.class);
+                startActivity(activity1Intent);
+            }
+        });
     }
 
     ImageListener imageListener = new ImageListener() {
