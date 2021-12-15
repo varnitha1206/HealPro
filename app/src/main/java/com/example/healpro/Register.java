@@ -21,13 +21,12 @@ public class Register extends AppCompatActivity {
         verify.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                EditText nam,username,;
+                EditText nam,username;
                 reg=(Button) findViewById(R.id.register2);
                 nam=(EditText) findViewById(R.id.edit_name);
                 String n=nam.getText().toString();
                 username=(EditText)findViewById(R.id.edit_username);
                 String uname=username.getText().toString();
-
             }
         });
             reg.setOnClickListener(new View.OnClickListener() {
