@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.synnapps.carouselview.CarouselView;
 import com.synnapps.carouselview.ImageListener;
@@ -21,12 +22,9 @@ public class start extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
         super.onCreate(savedInstanceState);
-//        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
-//        setContentView(R.layout.activity_start2);
         setContentView(R.layout.activity_start2);
         carouselView = (CarouselView) findViewById(R.id.carouselView);
         carouselView.setPageCount(sampleImages.length);
-
         carouselView.setImageListener(imageListener);
         login=findViewById(R.id.button2);
         register=findViewById(R.id.button3);
@@ -40,8 +38,9 @@ public class start extends AppCompatActivity {
         register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent activity2Intent = new Intent(start.this, Register.class);
-                startActivity(activity2Intent);
+//                Toast.makeText(getApplicationContext(), "Toast-check", Toast.LENGTH_SHORT).show();
+                Intent activity1Intent = new Intent(getBaseContext(), Register.class);
+                startActivity(activity1Intent);
             }
         });
     }

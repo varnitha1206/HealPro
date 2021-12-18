@@ -14,11 +14,14 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 
+//import com.github.ybq.android.spinkit.SpinKitView;
+//import com.github.ybq.android.spinkit.sprite.Sprite;
+//import com.github.ybq.android.spinkit.style.DoubleBounce;
+//import com.github.ybq.android.spinkit.style.FadingCircle;
+//import com.github.ybq.android.spinkit.style.RotatingCircle;
 import com.github.ybq.android.spinkit.SpinKitView;
 import com.github.ybq.android.spinkit.sprite.Sprite;
-import com.github.ybq.android.spinkit.style.DoubleBounce;
 import com.github.ybq.android.spinkit.style.FadingCircle;
-import com.github.ybq.android.spinkit.style.RotatingCircle;
 import com.synnapps.carouselview.CarouselView;
 import com.synnapps.carouselview.ImageListener;
 
