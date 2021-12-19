@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HealPro">
         <activity
+            android:name=".profile"
+            android:exported="false" />
+        <activity
             android:name=".doctor_home"
             android:exported="false" />
         <activity
