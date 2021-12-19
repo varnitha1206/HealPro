@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -17,6 +18,7 @@ import com.synnapps.carouselview.ImageListener;
 public class start extends AppCompatActivity {
     CarouselView carouselView;
     Button login,register;
+    ImageButton doctor;
     int[] sampleImages = {R.drawable.logo, R.drawable.img1, R.drawable.img2, R.drawable.img3, R.drawable.img4};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +30,7 @@ public class start extends AppCompatActivity {
         carouselView.setImageListener(imageListener);
         login=findViewById(R.id.button2);
         register=findViewById(R.id.button3);
+        doctor=findViewById(R.id.imageButton);
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -41,6 +44,13 @@ public class start extends AppCompatActivity {
 //                Toast.makeText(getApplicationContext(), "Toast-check", Toast.LENGTH_SHORT).show();
                 Intent activity1Intent = new Intent(getBaseContext(), Register.class);
                 startActivity(activity1Intent);
+            }
+        });
+        doctor.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent doc_login=new Intent(getApplicationContext(),doctor_login.class);
+                startActivity(doc_login);
             }
         });
     }

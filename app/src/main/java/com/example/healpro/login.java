@@ -23,12 +23,12 @@ public class login extends AppCompatActivity {
         ImageView img=findViewById(R.id.heart);
         img.startAnimation(anim);
         anim.setRepeatCount(Animation.INFINITE);
-        Button login=findViewById(R.id.button);
+        Button login=findViewById(R.id.d_login);
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                EditText n=(EditText)findViewById(R.id.editTextTextPersonName2);
-                EditText pd=(EditText)findViewById(R.id.editTextTextPassword2);
+                EditText n=(EditText)findViewById(R.id.d_uid);
+                EditText pd=(EditText)findViewById(R.id.d_pd);
                 String name=n.getText().toString();
                 String password=pd.getText().toString();
                 if(name.equals("user") && password.equals("user")){
