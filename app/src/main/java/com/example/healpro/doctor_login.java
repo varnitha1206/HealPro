@@ -31,7 +31,7 @@ public class doctor_login extends AppCompatActivity {
                 }
                 else
                 {
-                    login.setError("Wrong credentials!");
+                    upd.setError("Wrong credentials!");
                 }
             }
         });
