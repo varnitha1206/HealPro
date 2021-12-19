@@ -3,10 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Rachita/AndroidStudioProjects/HealPro/app/src/main/res/drawable/round_corner.xml" value="0.1140625" />
+        <entry key="..\:/Users/Rachita/AndroidStudioProjects/HealPro/app/src/main/res/drawable/user_background.xml" value="0.1140625" />
         <entry key="..\:/Users/Rachita/AndroidStudioProjects/HealPro/app/src/main/res/layout/activity_home.xml" value="0.2" />
         <entry key="..\:/Users/Rachita/AndroidStudioProjects/HealPro/app/src/main/res/layout/activity_login2.xml" value="0.1" />
         <entry key="..\:/Users/Rachita/AndroidStudioProjects/HealPro/app/src/main/res/layout/activity_main.xml" value="0.2" />
-        <entry key="..\:/Users/Rachita/AndroidStudioProjects/HealPro/app/src/main/res/layout/activity_register.xml" value="0.2" />
+        <entry key="..\:/Users/Rachita/AndroidStudioProjects/HealPro/app/src/main/res/layout/activity_register.xml" value="0.1" />
         <entry key="..\:/Users/Rachita/AndroidStudioProjects/HealPro/app/src/main/res/layout/activity_start.xml" value="0.2" />
         <entry key="..\:/Users/Rachita/AndroidStudioProjects/HealPro/app/src/main/res/layout/activity_start2.xml" value="0.2" />
         <entry key="..\:/Users/varni/AndroidStudioProjects/HealPro/app/src/main/res/drawable/item_selector.xml" value="0.1" />
