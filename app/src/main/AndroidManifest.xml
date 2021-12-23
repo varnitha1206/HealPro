@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HealPro">
         <activity
+            android:name=".treatments"
+            android:exported="false" />
+        <activity
+            android:name=".explore"
+            android:exported="false" />
+        <activity
             android:name=".profile"
             android:exported="false" />
         <activity
