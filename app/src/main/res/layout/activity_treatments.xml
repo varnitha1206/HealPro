@@ -1,20 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<!--Relative Layout-->
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/relativelayout">
+    android:background="@color/Navy_Blue"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".treatments">
 
-    <!--Recycler View widget-->
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerview"
-        android:scrollbars="horizontal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:backgroundTint="@color/white"
+        android:foregroundGravity="center"
+        app:cardCornerRadius="25dp"
+        android:layout_margin="10dp"
+        android:layout_height="200dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="18sp"
+            android:padding="30dp"
+            android:text="Please select your area of concern!"
+            android:textStyle="italic"
+            android:textColor="@color/Navy_Blue"/>
+    </androidx.cardview.widget.CardView>
+
+    <!-- viewpager to show images -->
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPagerMain"
+        android:layout_marginTop="200dp"
+        android:layout_width="match_parent"
+        android:foregroundGravity="center"
+        android:layout_height="wrap_content"/>
 
 </RelativeLayout>

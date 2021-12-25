@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HealPro">
         <activity
+            android:name=".BookAppointment"
+            android:exported="false" />
+        <activity
             android:name=".treatments"
             android:exported="false" />
         <activity
