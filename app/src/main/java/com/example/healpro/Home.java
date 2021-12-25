@@ -2,6 +2,7 @@ package com.example.healpro;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
+import androidx.viewpager.widget.ViewPager;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -59,6 +60,11 @@ public class Home extends AppCompatActivity {
                 return true;
             }
         });
-
+        ViewPager viewPager;
+        int[] images={R.drawable.covid,R.drawable.mask,R.drawable.scd,R.drawable.vaccine};
+        ViewPagerAdapter viewPagerAdapter;
+            viewPager = (ViewPager) findViewById(R.id.viewPagerMain);
+            viewPagerAdapter = new ViewPagerAdapter(Home.this,images);
+            viewPager.setAdapter(viewPagerAdapter);
     }
 }

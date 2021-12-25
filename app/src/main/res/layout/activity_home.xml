@@ -5,6 +5,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/body_container"
+    android:paddingTop="5dp"
     android:background="@color/Navy_Blue"
     tools:context=".MainActivity">
 
@@ -26,6 +27,50 @@
         app:labelVisibilityMode="unlabeled"
         app:menu="@menu/item_menu" />
 
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/Baby_Blue"
+        android:backgroundTint="@color/Baby_Blue"
+        android:text="Welcome!"
+        android:paddingTop="8dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:paddingLeft="20dp"/>
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_marginTop="50dp"
+        android:background="@color/Baby_Blue"
+        android:paddingLeft="20dp"
+        android:text="Get personalised treatment plans and daily guidance from leading doctors." />
+
+    <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+        android:id="@+id/youtube_player_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView13"
+
+        android:layout_marginTop="50dp"
+        app:autoPlay="false"
+        app:videoId="EKEWk4oWmjY" />
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/youtube_player_view"
+        android:backgroundTint="@color/Navy_Blue">
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewPagerMain"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:foregroundGravity="center"
+            android:backgroundTint="@color/Navy_Blue"
+            android:clickable="false"/>
+    </androidx.cardview.widget.CardView>
 
 
 </RelativeLayout>
