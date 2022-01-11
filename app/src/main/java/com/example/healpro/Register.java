@@ -1,12 +1,7 @@
 package com.example.healpro;
 
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.TextUtils;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
@@ -15,9 +10,12 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 public class Register extends AppCompatActivity {
     Button reg, verify;
-
+    String n,uname,ph,em,pwd,cpwd,gender;
+    private DBhandler dBhandler;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,18 +28,18 @@ public class Register extends AppCompatActivity {
                 EditText nam,username,phone;
                 reg=(Button) findViewById(R.id.register2);
                 nam=(EditText) findViewById(R.id.edit_name);
-                String n=nam.getText().toString();
+                n=nam.getText().toString();
                 username=(EditText)findViewById(R.id.edit_username);
-                String uname=username.getText().toString();
+                uname=username.getText().toString();
                 phone=(EditText)findViewById(R.id.phone_no);
-                String ph=phone.getText().toString();
+                ph=phone.getText().toString();
                 EditText email=(EditText) findViewById(R.id.em);
-                String em=email.getText().toString();
+                em=email.getText().toString();
                 EditText pd,cpd;
                 pd=(EditText) findViewById(R.id.pd);
                 cpd=(EditText) findViewById(R.id.cpd);
-                String pwd=pd.getText().toString();
-                String cpwd  =cpd.getText().toString();
+                pwd=pd.getText().toString();
+                cpwd  =cpd.getText().toString();
                 RadioGroup rg = (RadioGroup) findViewById(R.id.gender);
                 if(!n.isEmpty() && !uname.isEmpty())
                 {
@@ -59,8 +57,11 @@ public class Register extends AppCompatActivity {
 
                                     }
                                     else {
+                                        int n=(rg.getCheckedRadioButtonId());
+                                        RadioButton r = (RadioButton)findViewById(n);
+                                        gender=r.getText().toString();
                                         reg.setAlpha(1.0f);
-                                        reg.setClickable(true);
+                                        reg.setEnabled(true);
                                     }
                                 }
                                 else
@@ -88,6 +89,8 @@ public class Register extends AppCompatActivity {
                 @Override
                 public void onClick(View v)
                 {
+                        dBhandler = new DBhandler(Register.this);
+                        dBhandler.addNew(n, uname, em, ph,pwd,gender);
                         Intent home=new Intent(getApplicationContext(),Home.class);
                         startActivity(home);
                 }

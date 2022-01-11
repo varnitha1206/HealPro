@@ -24,6 +24,8 @@ TextView t1;
             @Override
             public void onClick(View v) {
                 Toast.makeText(getApplicationContext(), "Thank you for reaching out to us! We shall contact you in the next 10-15 mins", Toast.LENGTH_SHORT).show();
+                Intent ni=new Intent(getApplicationContext(),Home.class);
+                startActivity(ni);
             }
         });
     }
