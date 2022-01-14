@@ -40,20 +40,27 @@ public class ViewPagerAdapter extends PagerAdapter {
             @Override
             public void onClick(View v) {
                 StringBuilder s = new StringBuilder();
+                int a=0;
                 switch(position){
                     case 0: s.append("Dermatologist");
+                            a=0;
                             break;
                     case 1: s.append("Orthopedic");
+                            a=1;
                         break;
                     case 2: s.append("paediatrician");
+                            a=3;
                         break;
                     case 3: s.append("gynaecologist");
-                        break;
-                    case 4: s.append("Family Physcian");
+                            a=4;
+                            break;
+                    case 4: s.append("Family Physician");
+                            a=5;
                         break;
                 }
                 Intent pd= new Intent(context.getApplicationContext(),BookAppointment.class);
                 pd.putExtra("Concern : ",s.toString());
+                pd.putExtra("specialist",a);
                 context.startActivity(pd);
             }
         });

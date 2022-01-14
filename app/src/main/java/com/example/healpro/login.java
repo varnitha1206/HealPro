@@ -1,7 +1,5 @@
 package com.example.healpro;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -13,8 +11,11 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 public class login extends AppCompatActivity {
     TextView marq;
+    private DBhandler dBhandler;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,11 +32,18 @@ public class login extends AppCompatActivity {
                 EditText pd=(EditText)findViewById(R.id.d_pd);
                 String name=n.getText().toString();
                 String password=pd.getText().toString();
-                if(name.equals("user") && password.equals("user")){
-                Intent activity2Intent = new Intent(getApplicationContext(), Home.class);
-                startActivity(activity2Intent);}
-                else{
-                    Toast.makeText(getApplicationContext(), "Invalid credentials, please verify!", Toast.LENGTH_SHORT).show();
+                if(!name.isEmpty()&&!password.isEmpty()) {
+                    dBhandler = new DBhandler(login.this);
+                    int o = dBhandler.read(name, password);
+                    if (o == 1) {
+                        Intent activity2Intent = new Intent(getApplicationContext(), Home.class);
+                        startActivity(activity2Intent);
+                    } else {
+                        Toast.makeText(getApplicationContext(), "Invalid credentials, please verify!", Toast.LENGTH_SHORT).show();
+                    }
+                }
+                else {
+                    Toast.makeText(getApplicationContext(), "Enter Credentials!", Toast.LENGTH_SHORT).show();
                 }
             }
         });

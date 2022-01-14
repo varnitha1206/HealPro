@@ -91,7 +91,7 @@ public class Register extends AppCompatActivity {
                 {
                         dBhandler = new DBhandler(Register.this);
                         dBhandler.addNew(n, uname, em, ph,pwd,gender);
-                        Intent home=new Intent(getApplicationContext(),Home.class);
+                        Intent home=new Intent(getApplicationContext(),login.class);
                         startActivity(home);
                 }
             });
