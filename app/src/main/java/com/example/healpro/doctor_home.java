@@ -1,22 +1,17 @@
 package com.example.healpro;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.view.menu.MenuBuilder;
-import androidx.appcompat.view.menu.MenuPopupHelper;
-
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.Gravity;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.ListView;
 import android.widget.PopupMenu;
-import android.widget.Spinner;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class doctor_home extends AppCompatActivity {
     String patients[] = {"Stephanie", "Brian", "Nicole", "Nicholas", "Anthony", "Heather", "Eric", "Elizabeth"};
@@ -26,6 +21,9 @@ public class doctor_home extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_doctor_home);
+        DBhandler dBhandler;
+        dBhandler = new DBhandler(doctor_home.this);
+//        ArrayList<String> patients = dBhandler.list(0);
         Intent login = getIntent();
         String name = login.getStringExtra("Dr. ");
         getSupportActionBar().setTitle("Dr. " + name);

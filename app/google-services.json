@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "366341729085",
+    "project_id": "healpro-a7a8a",
+    "storage_bucket": "healpro-a7a8a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:366341729085:android:382f57b9d6b13b7351b354",
+        "android_client_info": {
+          "package_name": "com.example.healpro"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "366341729085-db78vsdkvsak5qd5in44gi8gj57eb9f7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBsXjEVnp6g5Jb5cDc9RkXIZWYrioTQwwo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "366341729085-db78vsdkvsak5qd5in44gi8gj57eb9f7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

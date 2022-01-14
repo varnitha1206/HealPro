@@ -225,6 +225,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginLeft="20dp"
+            android:enabled="false"
             android:alpha="0.4"
             android:clickable="false"
             android:backgroundTint="@color/Blue_Green"
