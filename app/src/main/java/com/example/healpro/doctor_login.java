@@ -28,10 +28,9 @@ public class doctor_login extends AppCompatActivity {
                     dBhandler = new DBhandler(doctor_login.this);
                     dBhandler.addDocs();
                     int o = dBhandler.readDoctor(id, pd);
-                    if(o==1) {
-                        String name = "John";
+                    if(o!=-1) {
                         Intent doctor_home = new Intent(getApplicationContext(), doctor_home.class);
-                        doctor_home.putExtra("Dr. ", name);
+                        doctor_home.putExtra("spd", o);
                         startActivity(doctor_home);
                     }
                     else
@@ -41,7 +40,7 @@ public class doctor_login extends AppCompatActivity {
                 }
                 else
                 {
-                    upd.setError("Wrong credentials!");
+                    upd.setError("Enter all credentials!");
                 }
             }
         });

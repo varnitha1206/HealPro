@@ -17,12 +17,14 @@ public class ViewPagerAdapter extends PagerAdapter {
     Context context;
     int[] img;
     LayoutInflater inflater;
+    int cid;
 
 
-    public ViewPagerAdapter(Context context, int[] img) {
+    public ViewPagerAdapter(Context context, int[] img,int cid) {
         this.context = context;
         this.img = img;
         inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        this.cid=cid;
     }
 
     @Override
@@ -40,27 +42,24 @@ public class ViewPagerAdapter extends PagerAdapter {
             @Override
             public void onClick(View v) {
                 StringBuilder s = new StringBuilder();
-                int a=0;
+                StringBuilder a = new StringBuilder();
+                a.append(position);
                 switch(position){
                     case 0: s.append("Dermatologist");
-                            a=0;
                             break;
                     case 1: s.append("Orthopedic");
-                            a=1;
                         break;
                     case 2: s.append("paediatrician");
-                            a=3;
                         break;
                     case 3: s.append("gynaecologist");
-                            a=4;
                             break;
                     case 4: s.append("Family Physician");
-                            a=5;
                         break;
                 }
                 Intent pd= new Intent(context.getApplicationContext(),BookAppointment.class);
                 pd.putExtra("Concern : ",s.toString());
-                pd.putExtra("specialist",a);
+                pd.putExtra("specialist",a.toString());
+                pd.putExtra("cid",cid);
                 context.startActivity(pd);
             }
         });

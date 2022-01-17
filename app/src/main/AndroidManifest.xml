@@ -3,6 +3,7 @@
     package="com.example.healpro">
 
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
 
     <application
         android:allowBackup="true"
@@ -11,6 +12,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.HealPro">
+        <activity
+            android:name=".Patient_prescription"
+            android:exported="false" />
+        <activity
+            android:name=".doctor_prescription"
+            android:exported="false" />
         <activity
             android:name=".DBhandler"
             android:exported="false" />

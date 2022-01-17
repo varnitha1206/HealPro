@@ -35,8 +35,9 @@ public class login extends AppCompatActivity {
                 if(!name.isEmpty()&&!password.isEmpty()) {
                     dBhandler = new DBhandler(login.this);
                     int o = dBhandler.read(name, password);
-                    if (o == 1) {
+                    if (o != 0) {
                         Intent activity2Intent = new Intent(getApplicationContext(), Home.class);
+                        activity2Intent.putExtra("cid",o);
                         startActivity(activity2Intent);
                     } else {
                         Toast.makeText(getApplicationContext(), "Invalid credentials, please verify!", Toast.LENGTH_SHORT).show();

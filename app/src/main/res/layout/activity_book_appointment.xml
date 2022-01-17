@@ -34,7 +34,7 @@
         android:id="@+id/p_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="173dp"
+        android:layout_marginTop="150dp"
         android:layout_marginEnd="28dp"
         android:background="@drawable/border"
         android:ems="12"
@@ -62,8 +62,8 @@
         android:id="@+id/p_phone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="268dp"
-        android:layout_marginEnd="40dp"
+        android:layout_marginTop="264dp"
+        android:layout_marginEnd="28dp"
         android:background="@drawable/border"
         android:ems="12"
         android:inputType="number"
@@ -72,10 +72,11 @@
         app:layout_constraintTop_toBottomOf="@+id/p_name" />
 
     <TextView
+        android:id="@+id/textView15"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="40dp"
-        android:layout_marginTop="173dp"
+        android:layout_marginTop="150dp"
         android:background="@drawable/border"
         android:backgroundTint="@color/Navy_Blue"
         android:padding="10dp"
@@ -94,6 +95,7 @@
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="68dp"
         android:background="@drawable/border"
         android:backgroundTint="@color/Navy_Blue"
         android:inputType="number"
@@ -104,16 +106,16 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/p_age"
-        app:layout_constraintHorizontal_bias="0.933"
+        app:layout_constraintHorizontal_bias="0.95"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.435" />
+        app:layout_constraintTop_toBottomOf="@+id/p_name"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/textView14"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="268dp"
+        android:layout_marginTop="264dp"
         android:background="@drawable/border"
         android:backgroundTint="@color/Navy_Blue"
         android:inputType="number"
@@ -124,10 +126,10 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/p_phone"
-        app:layout_constraintHorizontal_bias="1"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.55" />
+        app:layout_constraintTop_toBottomOf="@+id/textView15"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/textView10"
@@ -143,10 +145,10 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/p_age"
-        app:layout_constraintHorizontal_bias="0.466"
+        app:layout_constraintHorizontal_bias="0.966"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.579" />
+        app:layout_constraintVertical_bias="0.509" />
 
     <RadioGroup
         android:id="@+id/radioGroup"
@@ -183,7 +185,7 @@
         android:id="@+id/textView11"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="132dp"
         android:gravity="center"
         android:text="Consultation : 300Rs"
         android:textSize="18sp"
