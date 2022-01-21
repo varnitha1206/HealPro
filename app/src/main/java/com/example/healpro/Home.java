@@ -67,8 +67,8 @@ public class Home extends AppCompatActivity {
         int[] images={R.drawable.covid,R.drawable.mask,R.drawable.scd,R.drawable.vaccine};
         ViewPagerAdapter viewPagerAdapter;
             viewPager = (ViewPager) findViewById(R.id.viewPagerMain);
+            viewPagerAdapter = new ViewPagerAdapter(Home.this,images,cid,1);
             viewPager.setClickable(false);
-            viewPagerAdapter = new ViewPagerAdapter(Home.this,images,cid);
             viewPager.setAdapter(viewPagerAdapter);
     }
 }

@@ -20,7 +20,7 @@ public class login extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login2);
-       Animation anim= AnimationUtils.loadAnimation(getApplicationContext(),R.anim.slide);
+        Animation anim= AnimationUtils.loadAnimation(getApplicationContext(),R.anim.slide);
         ImageView img=findViewById(R.id.heart);
         img.startAnimation(anim);
         anim.setRepeatCount(Animation.INFINITE);

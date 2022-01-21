@@ -60,6 +60,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/youtube_player_view"
+        android:clickable="false"
         android:backgroundTint="@color/Navy_Blue">
 
         <androidx.viewpager.widget.ViewPager
@@ -69,7 +70,8 @@
             android:layout_marginTop="5dp"
             android:foregroundGravity="center"
             android:backgroundTint="@color/Navy_Blue"
-            android:clickable="false"/>
+            android:clickable="false"
+            android:allowClickWhenDisabled="false"/>
     </androidx.cardview.widget.CardView>
 
 

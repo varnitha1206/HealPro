@@ -18,13 +18,15 @@ public class ViewPagerAdapter extends PagerAdapter {
     int[] img;
     LayoutInflater inflater;
     int cid;
+    int flag;
 
 
-    public ViewPagerAdapter(Context context, int[] img,int cid) {
+    public ViewPagerAdapter(Context context, int[] img,int cid,int flag) {
         this.context = context;
         this.img = img;
         inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         this.cid=cid;
+        this.flag=flag;
     }
 
     @Override
@@ -41,6 +43,7 @@ public class ViewPagerAdapter extends PagerAdapter {
         itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if(flag!=1){
                 StringBuilder s = new StringBuilder();
                 StringBuilder a = new StringBuilder();
                 a.append(position);
@@ -61,7 +64,7 @@ public class ViewPagerAdapter extends PagerAdapter {
                 pd.putExtra("specialist",a.toString());
                 pd.putExtra("cid",cid);
                 context.startActivity(pd);
-            }
+            }}
         });
         Objects.requireNonNull(container).addView(itemView);
         return itemView;
