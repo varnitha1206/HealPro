@@ -45,4 +45,9 @@ public class doctor_login extends AppCompatActivity {
             }
         });
     }
+    public void home(View view)
+    {
+        Intent back=new Intent(getApplicationContext(),start.class);
+        startActivity(back);
+    }
 }

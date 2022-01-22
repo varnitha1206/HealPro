@@ -1,6 +1,5 @@
 package com.example.healpro;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -8,6 +7,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.PopupMenu;
 
@@ -30,12 +30,12 @@ public class doctor_home extends AppCompatActivity {
         o = login.getIntExtra("spd",0);
         o=o-1;
         String spd = String.valueOf(o);
+        ImageButton ib = (ImageButton) findViewById(R.id.imageButton3);
         ArrayList<String> patients = dBhandler.list(spd);
         spin = (ListView)findViewById(R.id.listview);
         ArrayAdapter<String> aa = new ArrayAdapter<String>(this, R.layout.listview,R.id.patients_display,patients);
         spin.setAdapter(aa);
         spin.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @SuppressLint("RestrictedApi")
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 String details = patients.get(position);
@@ -65,6 +65,13 @@ public class doctor_home extends AppCompatActivity {
                     }
                 });
                 popup.show();
+            }
+        });
+        ib.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent logout = new Intent(getApplicationContext(),doctor_login.class);
+                startActivity(logout);
             }
         });
     }
